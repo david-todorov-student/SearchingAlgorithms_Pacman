@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
             psi.FileName = @"..\..\packages\python2.2.7.18\tools\python.exe";
             
             // 2) Provide script and arguments
-            string algorithm = cbAlgorithm.Items[cbAlgorithm.SelectedIndex].ToString();
+            string algorithm = cbTypeAlgorithm.Items[cbTypeAlgorithm.SelectedIndex].ToString();
             string script="";
             switch (algorithm)
             {
@@ -94,6 +94,29 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbAlgorithm_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cbTypeAlgorithm.Enabled = true;
+            if (cbAlgorithm.SelectedItem.ToString().Equals("Informed Search"))
+            {
+                cbTypeAlgorithm.Items.Clear();
+                cbTypeAlgorithm.Items.Add("A* Search");
+                cbTypeAlgorithm.Items.Add("Best-First Search");
+            }
+            else
+            {
+                cbTypeAlgorithm.Items.Clear();
+                cbTypeAlgorithm.Items.Add("Breadth-First Search");
+                cbTypeAlgorithm.Items.Add("Depth-First Search");
+                cbTypeAlgorithm.Items.Add("Uniform Cost Search");
+            }
+        }
+
+        private void cbTypeAlgorithm_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            button1.Enabled = true;
         }
     }
 }
