@@ -7,6 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using IronPython.Hosting;
@@ -15,8 +16,14 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        public int pacmanX { get; set; }
+        public int pacmanY { get; set; }
+        public int step { get; set; }
         public Form1()
         {
+            pacmanX = 5;
+            pacmanY = 455;
+            step = 50;
             InitializeComponent();
         }
 
@@ -89,6 +96,34 @@ namespace WindowsFormsApp1
                 sb.Append(s).AppendLine();
             }
             textBox1.Text = sb.ToString();
+
+            Animate(resultsArr);
+        }
+
+        public void Animate(string[] array)
+        {
+            foreach (string action in array)
+            {
+                switch (action)
+                {
+                    case "ProdolzhiPravo":
+                    {
+                        break;
+                    }
+                    case "ProdolzhiNazad":
+                    {
+                        break;
+                    }
+                    case "SvrtiLevo":
+                    {
+                        break;
+                    }
+                    case "Desno":
+                    {
+                        break;
+                    }
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -117,6 +152,41 @@ namespace WindowsFormsApp1
         private void cbTypeAlgorithm_SelectionChangeCommitted(object sender, EventArgs e)
         {
             button1.Enabled = true;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Black, 1);
+            Brush brush = new SolidBrush(Color.DimGray);
+
+            g.FillRectangle(brush, 0, 0, 200, 50);
+            g.FillRectangle(brush, 0, 50, 50, 50);
+            g.FillRectangle(brush, 0, 150, 50, 50);
+            g.FillRectangle(brush, 300, 0, 50, 50);
+            g.FillRectangle(brush, 400, 50, 100, 100);
+            g.FillRectangle(brush, 50, 250, 50, 150);
+            g.FillRectangle(brush, 400, 250, 100, 50);
+            g.FillRectangle(brush, 400, 400, 50, 50);
+            g.FillRectangle(brush, 200, 100, 50, 150);
+            g.FillRectangle(brush, 150, 150, 150, 50);
+            g.FillRectangle(brush, 200, 400, 100, 50);
+            g.FillRectangle(brush, 300, 350, 50, 150);
+
+            g.DrawRectangle(pen, 0, 0, 500, 500);
+            g.DrawRectangle(pen, 0, 0, 50, 500);
+            g.DrawRectangle(pen, 0, 0, 500, 50);
+            g.DrawRectangle(pen, 0, 100, 500, 50);
+            g.DrawRectangle(pen, 100, 0, 50, 500);
+            g.DrawRectangle(pen, 0, 200, 500, 50);
+            g.DrawRectangle(pen, 200, 0, 50, 500);
+            g.DrawRectangle(pen, 0, 300, 500, 50);
+            g.DrawRectangle(pen, 300, 0, 50, 500);
+            g.DrawRectangle(pen, 0, 400, 500, 50);
+            g.DrawRectangle(pen, 400, 0, 50, 500);
+
+            picBoxPacman.Location = new Point(pacmanX, pacmanY);
+
         }
     }
 }
