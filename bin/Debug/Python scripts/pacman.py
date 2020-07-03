@@ -1,7 +1,6 @@
 from searching_framework.utils import Problem
 from copy import deepcopy
 
-
 def move_forward(man_x, man_y, direction):
     if direction == "istok":
         return man_x + 1, man_y, direction
@@ -111,12 +110,13 @@ class Pacman(Problem):
     def h(self, node):
         man = node.state[0][0], node.state[0][1]
         food = [t for t in node.state[1]]
-        max_distance = 0
+        max_distance=0
         for f in food:
             dist = manhattan_distance(man, f)
-            if dist > max_distance:
+            if dist>max_distance:
                 max_distance = dist
         return max_distance
+
 
     def goal_test(self, state):
 
