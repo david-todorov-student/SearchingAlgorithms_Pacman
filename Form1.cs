@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
 
         public Form1()
         {
-            Pacman = new Pacman(5, 455);
+            Pacman = new Pacman(5, 455, picBoxPacman);
             InitializeComponent();
         }
 
@@ -80,8 +80,11 @@ namespace WindowsFormsApp1
             //     errors = process.StandardError.ReadToEnd();
             //     results = process.StandardOutput.ReadToEnd();
             // }
-
+            picBoxPacman.Location = new Point(5, 455);
+            Pacman = new Pacman(5, 455, picBoxPacman);
             string[] resultsArr = printResults("", res);
+            Invalidate();
+            Thread.Sleep(500);
             Animate(resultsArr);
         }
 
@@ -135,9 +138,8 @@ namespace WindowsFormsApp1
                         break;
                     }
                 }
-                picBoxPacman.Location = new Point(Pacman.X, Pacman.Y);
                 Invalidate();
-                Thread.Sleep(250);
+                Thread.Sleep(300);
             }
         }
 
@@ -222,7 +224,7 @@ namespace WindowsFormsApp1
         {
             if (this.dirX == 0 && this.dirY != 0)
             {
-                this.dirX = -1 * this.dirY;
+                this.dirX = 1 * this.dirY;
                 this.dirY = 0;
             }
             else if (this.dirY == 0 && this.dirX != 0)
@@ -236,7 +238,7 @@ namespace WindowsFormsApp1
         {
             if (this.dirX == 0 && this.dirY != 0)
             {
-                this.dirX = 1 * this.dirY;
+                this.dirX = -1 * this.dirY;
                 this.dirY = 0;
             }
             else if (this.dirY == 0 && this.dirX != 0)
@@ -259,37 +261,47 @@ namespace WindowsFormsApp1
         public int Y { get; set; }
         public int Step { get; set; }
         public Direction Direction { get; set; }
+        public PictureBox Picture { get; set; }
 
-        public Pacman(int x, int y)
+        public Pacman(int x, int y, PictureBox picture)
         {
             this.X = x;
             this.Y = y;
             Step = 50;
             Direction = new Direction(1, 0);
+            this.Picture = picture;
         }
 
         public void moveForward()
         {
             this.X += (Step * this.Direction.dirX);
             this.Y += (Step * this.Direction.dirY);
+            this.Picture.Location = new Point(this.X, this.Y);
         }
-
+        //Image img = pictureBox1.Image;
+ //       img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+   //     pictureBox1.Image = img;
         public void moveBackward()
         {
             Direction.turnBack();
             moveForward();
+            this.Picture.Location = new Point(this.X, this.Y);
         }
 
         public void moveLeft()
         {
             Direction.turnLeft();
             moveForward();
+            this.Picture.Location = new Point(this.X, this.Y);
+            
         }
 
         public void moveRight()
         {
             Direction.turnRight();
             moveForward();
+            this.Picture.Location = new Point(this.X, this.Y);
+            
         }
     }
 }

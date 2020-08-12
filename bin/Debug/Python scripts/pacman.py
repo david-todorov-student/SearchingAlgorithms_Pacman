@@ -7,9 +7,9 @@ def move_forward(man_x, man_y, direction):
     elif direction == "zapad":
         return man_x - 1, man_y, direction
     elif direction == "sever":
-        return man_x, man_y - 1, direction
-    elif direction == "jug":
         return man_x, man_y + 1, direction
+    elif direction == "jug":
+        return man_x, man_y - 1, direction
 
 
 def move_backward(man_x, man_y, direction):
@@ -18,16 +18,16 @@ def move_backward(man_x, man_y, direction):
     elif direction == "zapad":
         return man_x + 1, man_y, "istok"
     elif direction == "sever":
-        return man_x, man_y + 1, "jug"
+        return man_x, man_y - 1, "jug"
     elif direction == "jug":
-        return man_x, man_y - 1, "sever"
+        return man_x, man_y + 1, "sever"
 
 
 def move_left(man_x, man_y, direction):
     if direction == "istok":
-        return man_x, man_y - 1, "sever"
+        return man_x, man_y + 1, "sever"
     elif direction == "zapad":
-        return man_x, man_y + 1, "jug"
+        return man_x, man_y - 1, "jug"
     elif direction == "sever":
         return man_x - 1, man_y, "zapad"
     elif direction == "jug":
@@ -36,9 +36,9 @@ def move_left(man_x, man_y, direction):
 
 def move_right(man_x, man_y, direction):
     if direction == "istok":
-        return man_x, man_y + 1, "jug"
+        return man_x, man_y - 1, "jug"
     elif direction == "zapad":
-        return man_x, man_y - 1, "sever"
+        return man_x, man_y + 1, "sever"
     elif direction == "sever":
         return man_x + 1, man_y, "istok"
     elif direction == "jug":
@@ -54,14 +54,23 @@ def manhattan_distance(dot1, dot2):
 class Pacman(Problem):
     def __init__(self, initial, goal=None):
         self.initial = initial
-        self.obstacles = [(0, 0), (0, 1), (0, 2), (0, 3), (0, 6), (1, 0), (1, 8), (1, 9),
-                          (2, 4), (2, 8), (2, 9), (3, 0), (3, 3), (3, 4), (3, 5), (4, 4),
-                          (5, 1), (5, 8), (5, 9), (6, 1), (7, 1), (7, 6), (8, 4), (8, 5),
-                          (8, 6), (8, 8), (9, 6)]
-        self.goal = ()
+        self.obstacles = [(0, 6), (0, 8), (0, 9), (1, 2), (1, 3), (1, 4), (1, 9),
+                          (2, 9), (3, 6), (3, 9), (4, 1), (4, 5), (4, 6), (4, 7),
+                          (5, 1), (5, 6), (6, 0), (6, 1), (6, 2), (6, 9), (8, 1),
+                          (8, 4), (8, 7), (8, 8), (9, 4), (9, 7), (9, 8)]
+        self.goal = goal
 
     def successor(self, state):
+        """За дадена состојба, врати речник од парови {акција : состојба}
+        достапни од оваа состојба. Ако има многу следбеници, употребете
+        итератор кој би ги генерирал следбениците еден по еден, наместо да
+        ги генерирате сите одеднаш.
 
+        :param state: дадена состојба
+        :return:  речник од парови {акција : состојба} достапни од оваа
+                  состојба
+        :rtype: dict
+        """
         successors = dict()
 
         man_x = state[0][0]
@@ -100,11 +109,23 @@ class Pacman(Problem):
         return successors
 
     def actions(self, state):
+        """За дадена состојба state, врати листа од сите акции што може да
+        се применат над таа состојба
 
+        :param state: дадена состојба
+        :return: листа на акции
+        :rtype: list
+        """
         return self.successor(state).keys()
 
     def result(self, state, action):
+        """За дадена состојба state и акција action, врати ја состојбата
+        што се добива со примена на акцијата над состојбата
 
+        :param state: дадена состојба
+        :param action: дадена акција
+        :return: резултантна состојба
+        """
         return self.successor(state)[action]
 
     def h(self, node):
@@ -119,4 +140,13 @@ class Pacman(Problem):
 
 
     def goal_test(self, state):
+        """Врати True ако state е целна состојба. Даденава имплементација
+        на методот директно ја споредува state со self.goal, како што е
+        специфицирана во конструкторот. Имплементирајте го овој метод ако
+        проверката со една целна состојба self.goal не е доволна.
+
+        :param state: дадена состојба
+        :return: дали дадената состојба е целна состојба
+        :rtype: bool
+        """
         return state[1] == self.goal
