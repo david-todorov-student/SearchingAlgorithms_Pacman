@@ -48,3 +48,28 @@ D:\Coding projects\Visual Studio Projects\SearchingAlgorithms_Pacman\obj\Debug\S
 D:\Coding projects\Visual Studio Projects\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.exe
 D:\Coding projects\Visual Studio Projects\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.pdb
 D:\Coding projects\Visual Studio Projects\SearchingAlgorithms_Pacman\obj\Debug\WindowsFormsApp1.Form1.resources
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\SearchingAlgorithms_Pacman.exe.config
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\SearchingAlgorithms_Pacman.exe
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\SearchingAlgorithms_Pacman.pdb
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.dll
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Modules.dll
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.SQLite.dll
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Wpf.dll
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Dynamic.dll
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.dll
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.Metadata.dll
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.xml
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Modules.xml
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.SQLite.xml
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Wpf.xml
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Dynamic.xml
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.xml
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.Metadata.xml
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csprojAssemblyReference.cache
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\WindowsFormsApp1.Form1.resources
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.Properties.Resources.resources
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csproj.GenerateResource.cache
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csproj.CoreCompileInputs.cache
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csproj.CopyComplete
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.exe
+E:\BOBO\VisualStudioCommunity\source\repo\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.pdb
