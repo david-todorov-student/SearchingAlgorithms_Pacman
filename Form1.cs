@@ -296,9 +296,7 @@ namespace WindowsFormsApp1
             this.Y += (Step * this.Direction.dirY);
             this.Picture.Location = new Point(this.X, this.Y);
         }
-        //Image img = pictureBox1.Image;
- //       img.RotateFlip(RotateFlipType.Rotate90FlipNone);
-   //     pictureBox1.Image = img;
+        
         public void moveBackward()
         {
             Direction.turnBack();
