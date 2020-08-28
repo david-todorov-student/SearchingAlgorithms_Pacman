@@ -98,3 +98,28 @@ D:\Coding projects\Visual Studio Projects\Proektna\SearchingAlgorithms_Pacman\ob
 D:\Coding projects\Visual Studio Projects\Proektna\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csproj.CopyComplete
 D:\Coding projects\Visual Studio Projects\Proektna\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.exe
 D:\Coding projects\Visual Studio Projects\Proektna\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.pdb
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\SearchingAlgorithms_Pacman.exe.config
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\SearchingAlgorithms_Pacman.exe
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\SearchingAlgorithms_Pacman.pdb
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.dll
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Modules.dll
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.SQLite.dll
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Wpf.dll
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Dynamic.dll
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.dll
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.Metadata.dll
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.xml
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Modules.xml
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.SQLite.xml
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\IronPython.Wpf.xml
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Dynamic.xml
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.xml
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\bin\Debug\Microsoft.Scripting.Metadata.xml
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csprojAssemblyReference.cache
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.Properties.Resources.resources
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csproj.GenerateResource.cache
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csproj.CoreCompileInputs.cache
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.csproj.CopyComplete
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.exe
+D:\Coding projects\Visual Studio Projects\Proektna Vizuelno\SearchingAlgorithms_Pacman\obj\Debug\SearchingAlgorithms_Pacman.pdb

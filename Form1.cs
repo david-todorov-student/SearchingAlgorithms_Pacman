@@ -120,6 +120,7 @@ namespace WindowsFormsApp1
 
         public void Animate(string[] array)
         {
+            lblScore.Text = Pacman.Score.ToString();
             foreach (string action in array)
             {
                 switch (action)
@@ -146,6 +147,7 @@ namespace WindowsFormsApp1
                     }
                 }
 
+                lblScore.Text = Pacman.Score.ToString();
                 Invalidate();
                 Thread.Sleep(300);
             }
@@ -280,6 +282,9 @@ namespace WindowsFormsApp1
         public int Step { get; set; }
         public Direction Direction { get; set; }
         public PictureBox Picture { get; set; }
+        public List<Point> FoodPoints { get; set; }
+        public int DotsEaten { get; set; }
+        public int Score { get; set; }
 
         public Pacman(int x, int y, PictureBox picture)
         {
@@ -288,6 +293,31 @@ namespace WindowsFormsApp1
             Step = 50;
             Direction = new Direction(1, 0);
             this.Picture = picture;
+            FoodPoints = new List<Point>();
+            FoodPoints.Add(new Point(205, 455));
+            FoodPoints.Add(new Point(105, 155));
+            FoodPoints.Add(new Point(305, 205));
+            FoodPoints.Add(new Point(405, 305));
+            FoodPoints.Add(new Point(405, 355));
+            DotsEaten = 0;
+        }
+
+        public void checkForFood()
+        {
+            foreach (var point in FoodPoints)
+            {
+                if (point.X.Equals(this.X) && point.Y.Equals(this.Y))
+                {
+                    Score += 10;
+                    DotsEaten += 1;
+                    if (DotsEaten == FoodPoints.Count)
+                    {
+                        Score += 500;
+                    }
+                    return;
+                }
+            }
+            Score -= 1;
         }
 
         public void moveForward()
@@ -295,6 +325,7 @@ namespace WindowsFormsApp1
             this.X += (Step * this.Direction.dirX);
             this.Y += (Step * this.Direction.dirY);
             this.Picture.Location = new Point(this.X, this.Y);
+            checkForFood();
         }
         
         public void moveBackward()
@@ -302,6 +333,7 @@ namespace WindowsFormsApp1
             Direction.turnBack();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
+            checkForFood();
         }
 
         public void moveLeft()
@@ -309,6 +341,7 @@ namespace WindowsFormsApp1
             Direction.turnLeft();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
+            checkForFood();
             
         }
 
@@ -317,7 +350,7 @@ namespace WindowsFormsApp1
             Direction.turnRight();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
-            
+            checkForFood();
         }
     }
 }
