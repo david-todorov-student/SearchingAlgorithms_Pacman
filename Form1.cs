@@ -58,8 +58,7 @@ namespace WindowsFormsApp1
                     break;
             }
 
-            var errors = "";
-            var results = "";
+            string results;
             if (algorithm == "Depth-First Search")
             {
                 results = res;
@@ -75,28 +74,34 @@ namespace WindowsFormsApp1
                 psi.RedirectStandardError = true;
 
                 // 4) Execute process and get output
-                errors = "";
-                results = "";
                 using (var process = Process.Start(psi))
                 {
-                    errors = process.StandardError.ReadToEnd();
                     results = process.StandardOutput.ReadToEnd();
                 }
             }
 
-            
-
             picBoxPacman.Location = new Point(5, 455);
             Pacman = new Pacman(5, 455, picBoxPacman);
-            string[] resultsArr = printResults("", results);
-            printResults("", res);
-
+            string[] resultsArr = getActions(results);
+            printActions(resultsArr);
             Invalidate();
 
             Animate(resultsArr);
         }
 
-        public string[] printResults(string errors, string results)
+        public void printActions(string[] actions)
+        {
+            // 5) Display output
+            StringBuilder sb = new StringBuilder();
+            foreach (string s in actions)
+            {
+                sb.Append(s).AppendLine();
+            }
+
+            textBox1.Text = sb.ToString();
+        }
+
+        public string[] getActions(string results)
         {
             results = results.Trim().Replace("[", String.Empty)
                 .Replace("]", String.Empty).Replace("\'", String.Empty);
@@ -106,21 +111,12 @@ namespace WindowsFormsApp1
                 resultsArr[i] = resultsArr[i].Replace("\'", string.Empty);
             }
 
-            // 5) Display output
-            StringBuilder sb = new StringBuilder();
-            sb.Append(errors).Append("\n");
-            foreach (string s in resultsArr)
-            {
-                sb.Append(s).AppendLine();
-            }
-
-            textBox1.Text = sb.ToString();
             return resultsArr;
         }
 
         public void Animate(string[] array)
         {
-            lblScore.Text = Pacman.Score.ToString();
+            lblScore.Text = "";
             foreach (string action in array)
             {
                 switch (action)
@@ -146,7 +142,6 @@ namespace WindowsFormsApp1
                             break;
                     }
                 }
-
                 lblScore.Text = Pacman.Score.ToString();
                 Invalidate();
                 Thread.Sleep(300);
