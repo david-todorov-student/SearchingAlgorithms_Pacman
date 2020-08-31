@@ -53,7 +53,7 @@
             "Uninformed Search",
             "Informed Search"});
             this.cbAlgorithm.Location = new System.Drawing.Point(730, 50);
-            this.cbAlgorithm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbAlgorithm.Margin = new System.Windows.Forms.Padding(2);
             this.cbAlgorithm.Name = "cbAlgorithm";
             this.cbAlgorithm.Size = new System.Drawing.Size(183, 21);
             this.cbAlgorithm.TabIndex = 0;
@@ -74,7 +74,7 @@
             // 
             this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(31, 595);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(64, 29);
             this.button1.TabIndex = 2;
@@ -85,7 +85,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(734, 204);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -94,9 +94,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lblScore);
             this.panel1.Controls.Add(this.picBoxPacman);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(31, 32);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(525, 569);
             this.panel1.TabIndex = 4;
@@ -106,7 +108,7 @@
             // 
             this.picBoxPacman.Image = ((System.Drawing.Image)(resources.GetObject("picBoxPacman.Image")));
             this.picBoxPacman.Location = new System.Drawing.Point(27, 457);
-            this.picBoxPacman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxPacman.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxPacman.Name = "picBoxPacman";
             this.picBoxPacman.Size = new System.Drawing.Size(37, 40);
             this.picBoxPacman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +120,7 @@
             this.cbTypeAlgorithm.Enabled = false;
             this.cbTypeAlgorithm.FormattingEnabled = true;
             this.cbTypeAlgorithm.Location = new System.Drawing.Point(730, 132);
-            this.cbTypeAlgorithm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTypeAlgorithm.Margin = new System.Windows.Forms.Padding(2);
             this.cbTypeAlgorithm.Name = "cbTypeAlgorithm";
             this.cbTypeAlgorithm.Size = new System.Drawing.Size(183, 21);
             this.cbTypeAlgorithm.TabIndex = 5;
@@ -155,7 +157,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(560, 489);
+            this.label1.Location = new System.Drawing.Point(-5, 519);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 25);
@@ -166,7 +168,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblScore.Location = new System.Drawing.Point(560, 515);
+            this.lblScore.Location = new System.Drawing.Point(64, 520);
             this.lblScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(0, 25);
@@ -177,21 +179,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 732);
-            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblActions);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbTypeAlgorithm);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblAlgorithmType);
             this.Controls.Add(this.cbAlgorithm);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPacman)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
