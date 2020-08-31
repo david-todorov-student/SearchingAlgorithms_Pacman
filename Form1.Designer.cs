@@ -94,9 +94,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblScore);
             this.panel1.Controls.Add(this.picBoxPacman);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(31, 32);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -157,7 +155,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(-5, 519);
+            this.label1.Location = new System.Drawing.Point(415, 594);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 25);
@@ -168,7 +166,7 @@
             // 
             this.lblScore.AutoSize = true;
             this.lblScore.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblScore.Location = new System.Drawing.Point(64, 520);
+            this.lblScore.Location = new System.Drawing.Point(484, 595);
             this.lblScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblScore.Name = "lblScore";
             this.lblScore.Size = new System.Drawing.Size(0, 25);
@@ -179,8 +177,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 732);
+            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblActions);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbTypeAlgorithm);
             this.Controls.Add(this.panel1);
@@ -192,7 +192,6 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPacman)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
