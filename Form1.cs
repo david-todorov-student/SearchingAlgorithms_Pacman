@@ -157,9 +157,10 @@ namespace WindowsFormsApp1
                 Thread.Sleep(300);
             }
 
-            string message = "Your score is " + Pacman.Score.ToString() + "!";
-            string title = "Score";
-            //MessageBox.Show(message, title);
+            string message = "This algorithm's score is ";
+            message += Pacman.Score.ToString() + "!";
+            string algorithm = cbTypeAlgorithm.Items[cbTypeAlgorithm.SelectedIndex].ToString();
+            string title = algorithm + "'s Score";
 
             Pacman = new Pacman(5, 455, picBoxPacman);
 
