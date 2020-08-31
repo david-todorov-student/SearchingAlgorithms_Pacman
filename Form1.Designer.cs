@@ -40,8 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblActions = new System.Windows.Forms.Label();
             this.tmrPacman = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblScore = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPacman)).BeginInit();
             this.SuspendLayout();
@@ -157,36 +155,13 @@
             this.tmrPacman.Enabled = true;
             this.tmrPacman.Interval = 500;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(417, 600);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 25);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Score:";
-            // 
-            // lblScore
-            // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblScore.Location = new System.Drawing.Point(488, 600);
-            this.lblScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(0, 25);
-            this.lblScore.TabIndex = 9;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 732);
-            this.Controls.Add(this.lblScore);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblActions);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbTypeAlgorithm);
             this.Controls.Add(this.panel1);
@@ -216,8 +191,6 @@
         private System.Windows.Forms.Timer tmrPacman;
         private System.Windows.Forms.PictureBox picBoxPacman;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblScore;
     }
 }
 

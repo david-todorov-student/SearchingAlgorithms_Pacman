@@ -124,7 +124,6 @@ namespace WindowsFormsApp1
 
         public void Animate(string[] array)
         {
-            lblScore.Text = "";
             foreach (string action in array)
             {
                 switch (action)
@@ -153,11 +152,13 @@ namespace WindowsFormsApp1
                             break;
                     }
                 }
-
-                lblScore.Text = Pacman.Score.ToString();
                 Invalidate();
                 Thread.Sleep(300);
             }
+
+            string message = "Your score is " + Pacman.Score.ToString() + "!";
+            string title = "Score";
+            MessageBox.Show(message, title);
 
             Pacman = new Pacman(5, 455, picBoxPacman);
         }
