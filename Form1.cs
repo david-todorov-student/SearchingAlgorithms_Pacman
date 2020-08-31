@@ -152,15 +152,18 @@ namespace WindowsFormsApp1
                             break;
                     }
                 }
+
                 Invalidate();
                 Thread.Sleep(300);
             }
 
             string message = "Your score is " + Pacman.Score.ToString() + "!";
             string title = "Score";
-            MessageBox.Show(message, title);
+            //MessageBox.Show(message, title);
 
             Pacman = new Pacman(5, 455, picBoxPacman);
+
+            MessageBox.Show(message, title);
         }
 
         private void Form1_Load(object sender, EventArgs e)
