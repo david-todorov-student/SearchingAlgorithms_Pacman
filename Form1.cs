@@ -37,22 +37,27 @@ namespace WindowsFormsApp1
             string algorithm = cbTypeAlgorithm.Items[cbTypeAlgorithm.SelectedIndex].ToString();
             string res = "";
             string script = "";
+
             switch (algorithm)
             {
                 case "Breadth-First Search":
                     script = @"Python scripts\main_bfs.py";
                     break;
+
                 case "Depth-First Search":
                     //script = @"Python scripts\main_dfs.py";
                     res = "['SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'ProdolzhiNazad', 'ProdolzhiPravo', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'ProdolzhiNazad', 'ProdolzhiPravo', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'ProdolzhiPravo', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'ProdolzhiNazad', 'SvrtiDesno', 'ProdolzhiPravo', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiDesno', 'ProdolzhiNazad', 'ProdolzhiPravo', 'SvrtiLevo', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'SvrtiLevo', 'SvrtiDesno', 'SvrtiDesno', 'SvrtiDesno', 'ProdolzhiNazad', 'ProdolzhiPravo']";
                     Thread.Sleep(500);
                     break;
+
                 case "Uniform Cost Search":
                     script = @"Python scripts\main_ucs.py";
                     break;
+
                 case "A* Search":
                     script = @"Python scripts\main_a-star.py";
                     break;
+
                 case "Best-First Search":
                     script = @"Python scripts\main_best-first.py";
                     break;
@@ -63,6 +68,7 @@ namespace WindowsFormsApp1
             {
                 results = res;
             }
+
             else
             {
                 psi.Arguments = $"\"{script}\"";
@@ -82,10 +88,11 @@ namespace WindowsFormsApp1
 
             picBoxPacman.Location = new Point(5, 455);
             Pacman = new Pacman(5, 455, picBoxPacman);
+
             string[] resultsArr = getActions(results);
             printActions(resultsArr);
+            
             Invalidate();
-
             Animate(resultsArr);
         }
 
@@ -106,6 +113,7 @@ namespace WindowsFormsApp1
             results = results.Trim().Replace("[", String.Empty)
                 .Replace("]", String.Empty).Replace("\'", String.Empty);
             string[] resultsArr = Regex.Split(results, ",\\s");
+
             for (int i = 0; i < resultsArr.Length; i++)
             {
                 resultsArr[i] = resultsArr[i].Replace("\'", string.Empty);
@@ -126,22 +134,26 @@ namespace WindowsFormsApp1
                             Pacman.moveForward();
                             break;
                     }
+
                     case "ProdolzhiNazad":
                     {
                             Pacman.moveBackward();
                             break;
                     }
+
                     case "SvrtiLevo":
                     {
                             Pacman.moveLeft();
                             break;
                     }
+
                     case "SvrtiDesno":
                     {
                             Pacman.moveRight();
                             break;
                     }
                 }
+
                 lblScore.Text = Pacman.Score.ToString();
                 Invalidate();
                 Thread.Sleep(300);
@@ -157,12 +169,14 @@ namespace WindowsFormsApp1
         private void cbAlgorithm_SelectionChangeCommitted(object sender, EventArgs e)
         {
             cbTypeAlgorithm.Enabled = true;
+
             if (cbAlgorithm.SelectedItem.ToString().Equals("Informed Search"))
             {
                 cbTypeAlgorithm.Items.Clear();
                 cbTypeAlgorithm.Items.Add("A* Search");
                 cbTypeAlgorithm.Items.Add("Best-First Search");
             }
+
             else
             {
                 cbTypeAlgorithm.Items.Clear();
@@ -242,6 +256,7 @@ namespace WindowsFormsApp1
                 this.dirX = 1 * this.dirY;
                 this.dirY = 0;
             }
+
             else if (this.dirY == 0 && this.dirX != 0)
             {
                 this.dirY = -1 * this.dirX;
@@ -256,6 +271,7 @@ namespace WindowsFormsApp1
                 this.dirX = -1 * this.dirY;
                 this.dirY = 0;
             }
+
             else if (this.dirY == 0 && this.dirX != 0)
             {
                 this.dirY = 1 * this.dirX;
@@ -305,13 +321,16 @@ namespace WindowsFormsApp1
                 {
                     Score += 10;
                     DotsEaten += 1;
+
                     if (DotsEaten == FoodPoints.Count)
                     {
                         Score += 500;
                     }
+
                     return;
                 }
             }
+
             Score -= 1;
         }
 
@@ -320,6 +339,7 @@ namespace WindowsFormsApp1
             this.X += (Step * this.Direction.dirX);
             this.Y += (Step * this.Direction.dirY);
             this.Picture.Location = new Point(this.X, this.Y);
+
             checkForFood();
         }
         
@@ -328,6 +348,7 @@ namespace WindowsFormsApp1
             Direction.turnBack();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
+
             checkForFood();
         }
 
@@ -336,6 +357,7 @@ namespace WindowsFormsApp1
             Direction.turnLeft();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
+
             checkForFood();
             
         }
@@ -345,6 +367,7 @@ namespace WindowsFormsApp1
             Direction.turnRight();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
+
             checkForFood();
         }
     }
