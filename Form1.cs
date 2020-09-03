@@ -1,18 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using IronPython.Hosting;
 
 namespace WindowsFormsApp1
 {
@@ -353,8 +346,6 @@ namespace WindowsFormsApp1
             Direction.turnBack();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
-
-            checkForFood();
         }
 
         public void moveLeft()
@@ -362,9 +353,6 @@ namespace WindowsFormsApp1
             Direction.turnLeft();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
-
-            checkForFood();
-            
         }
 
         public void moveRight()
@@ -372,8 +360,6 @@ namespace WindowsFormsApp1
             Direction.turnRight();
             moveForward();
             this.Picture.Location = new Point(this.X, this.Y);
-
-            checkForFood();
         }
     }
 }
